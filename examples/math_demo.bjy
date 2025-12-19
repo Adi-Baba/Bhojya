@@ -1,0 +1,23 @@
+===
+Math Example - Hypotenuse Calculator
+Calculates hyp = sqrt(a^2 + b^2)
+===
+
+kaam mukhya() {
+    rt_sacho(1); +++ "Enter side A:"
+    chanchal a = rt_lelo();
+    
+    rt_sacho(2); +++ "Enter side B:"
+    chanchal b = rt_lelo();
+    
+    chanchal a_sq = rt_pow(a, 2);
+    chanchal b_sq = rt_pow(b, 2);
+    
+    chanchal sum = a_sq + b_sq;
+    chanchal hyp = rt_sqrt(sum);
+    
+    rt_sacho(999); +++ "Hypotenuse is:"
+    rt_sacho(hyp);
+    
+    0
+}

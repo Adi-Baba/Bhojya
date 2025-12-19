@@ -1,0 +1,13 @@
+===
+Bhojya Standard Math Package
+Basic integer math functions.
+Usage: lathi std/math.bjy my_app.bjy
+===
+
+bahari kaam rt_sqrt(x);          +++ Square root (integer)
+bahari kaam rt_pow(base, exp);   +++ Power function
+bahari kaam rt_abs(x);           +++ Absolute value
+
++++ Trigonometry (Degrees, Scaled x1000)
+bahari kaam rt_sin(angle);       +++ sin(90) returns 1000
+bahari kaam rt_cos(angle);       +++ cos(0) returns 1000
