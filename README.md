@@ -99,6 +99,56 @@ A fully functional Notepad window will appear! 🎉
 
 ---
 
+## 💻 Console I/O (Terminal Programs)
+
+Bhojya supports terminal input/output for command-line applications!
+
+### Basic Example
+```bhojya
+kaam mukhya() {
+    rt_sacho(42);           +++ Print: 42
+    chanchal x = rt_lelo(); +++ Read integer from user
+    rt_sacho(x * 2);        +++ Print: doubled value
+    0
+}
+```
+
+### Compile and Run
+```powershell
+cd C:\Bhojya\Bhojya_SDK\bin
+.\lathi.exe ..\std\console.bjy ..\examples\console_io.bjy
+.\output.exe
+```
+
+📖 [Full Console I/O Guide →](docs/CONSOLE_IO.md)
+
+---
+
+## 💻 Console I/O (Terminal Programs)
+
+Bhojya supports terminal input/output for command-line applications!
+
+### Basic Example
+```bhojya
+kaam mukhya() {
+    rt_sacho(42);           +++ Print: 42
+    chanchal x = rt_lelo(); +++ Read integer from user
+    rt_sacho(x * 2);        +++ Print: doubled value
+    0
+}
+```
+
+### Compile and Run
+```powershell
+cd C:\Bhojya\Bhojya_SDK\bin
+.\lathi.exe ..\std\console.bjy ..\examples\console_io.bjy
+.\output.exe
+```
+
+📖 [Full Console I/O Guide →](docs/CONSOLE_IO.md)
+
+---
+
 ## 📦 What's Inside the SDK
 
 - **`bin/lathi.exe`** - The Bhojya compiler

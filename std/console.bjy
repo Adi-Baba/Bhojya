@@ -1,0 +1,13 @@
+===
+Bhojya Standard Console I/O Package
+For terminal-based programs.
+Usage: lathi std/console.bjy my_app.bjy
+===
+
++++ Output Functions
+bahari kaam rt_sacho(value);          +++ Print integer to console
+bahari kaam rt_sacho_sandesh(dummy);  +++ Print string from global_buffer
+
++++ Input Functions
+bahari kaam rt_lelo();                +++ Read integer from console
+bahari kaam rt_lelo_line();           +++ Read line to global_buffer

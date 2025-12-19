@@ -1,0 +1,17 @@
+===
+Console I/O Example - Calculator
+Demonstrates terminal input and output
+===
+
+kaam mukhya() {
+    rt_sacho(101);  +++ Print: "Enter first number:"
+    chanchal a = rt_lelo();
+    
+    rt_sacho(102);  +++ Print: "Enter second number:"
+    chanchal b = rt_lelo();
+    
+    rt_sacho(103);  +++ Print: "Sum is:"
+    rt_sacho(a + b);
+    
+    0
+}

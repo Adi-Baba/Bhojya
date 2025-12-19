@@ -1,0 +1,18 @@
+===
+Simple Counter - Console Demo
+Counts from 1 to N
+===
+
+kaam mukhya() {
+    rt_sacho(1000);  +++ "Count to:"
+    chanchal limit = rt_lelo();
+    
+    chanchal i = 1;
+    jabtak (i < limit + 1) {
+        rt_sacho(i);
+        i = i + 1
+    };
+    
+    rt_sacho(9999);  +++ "Done!"
+    0
+}
