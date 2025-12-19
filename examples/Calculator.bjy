@@ -1,0 +1,70 @@
+===
+Bhojya Scientific Calculator
+Demonstrates Console I/O, Math Library, and Logic Flow
+Usage: lathi std/console.bjy std/math.bjy Calculator.bjy
+===
+
+kaam mukhya() {
+    chanchal running = 1;
+    
+    jabtak (running) {
+        +++ Print Menu (Using built-in sacho for strings)
+        sacho("-------------------------------");
+        sacho("   BHOJYA CALCULATOR v1.0");
+        sacho("-------------------------------");
+        sacho("1. Add (+)");
+        sacho("2. Subtract (-)");
+        sacho("3. Multiply (*)");
+        sacho("4. Divide (/)");
+        sacho("5. Power (^)");
+        sacho("6. Square Root (sq)");
+        sacho("0. Exit");
+        sacho("-------------------------------");
+        sacho("Select Operation:");
+        
+        chanchal choice = rt_lelo();
+        
+        agar (choice == 0) tab {
+            running = 0;
+            sacho("Goodbye!");
+        } varnaa {
+            
+            +++ Binary Operations (1-5)
+            agar (choice < 6) tab {
+                sacho("Enter First Number:");
+                chanchal a = rt_lelo();
+                
+                sacho("Enter Second Number:");
+                chanchal b = rt_lelo();
+                
+                sacho("Result:");
+                
+                agar (choice == 1) tab { rt_sacho(a + b); };
+                agar (choice == 2) tab { rt_sacho(a - b); };
+                agar (choice == 3) tab { rt_sacho(a * b); };
+                agar (choice == 4) tab { 
+                    agar (b == 0) tab {
+                        sacho("Error: Division by Zero!");
+                    } varnaa {
+                        rt_sacho(a / b);
+                    }
+                };
+                agar (choice == 5) tab { rt_sacho(rt_pow(a, b)); };
+                
+            } varnaa {
+                
+                +++ Unary Operations (6)
+                agar (choice == 6) tab {
+                    sacho("Enter Number:");
+                    chanchal n = rt_lelo();
+                    sacho("Square Root is:");
+                    rt_sacho(rt_sqrt(n));
+                } varnaa {
+                    sacho("Invalid Choice!");
+                }
+            }
+        }
+    };
+    
+    0
+}

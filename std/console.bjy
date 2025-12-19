@@ -6,6 +6,7 @@ Usage: lathi std/console.bjy my_app.bjy
 
 +++ Output Functions
 bahari kaam rt_sacho(value);          +++ Print integer to console
+bahari kaam rt_print_text(msg);       +++ Print string to console
 bahari kaam rt_sacho_sandesh(dummy);  +++ Print string from global_buffer
 
 +++ Input Functions
