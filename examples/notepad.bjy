@@ -1,0 +1,81 @@
+===
+Bhojya Notebook (Pro + Full Logic)
+100% Native Behavior, 0% C visibility for user.
+===
+
+kaam mukhya() {
+    chanchal win = rt_sijan_khidki(1100, 800);
+    
+    +++ Setup Menus
+    chanchal menu_bar = rt_banaye_menu();
+    
+    chanchal menu_file = rt_banaye_submenu();
+    rt_jodo_menu_item(menu_file, 101, 10); +++ New
+    rt_jodo_menu_item(menu_file, 102, 11); +++ Open
+    rt_jodo_menu_item(menu_file, 103, 12); +++ Save
+    rt_jodo_menu_item(menu_file, 105, 16); +++ Exit
+    rt_jodo_submenu(menu_bar, menu_file, 1); 
+    
+    chanchal menu_edit = rt_banaye_submenu();
+    rt_jodo_menu_item(menu_edit, 201, 20); +++ Undo
+    rt_jodo_submenu(menu_bar, menu_edit, 2);
+    
+    chanchal menu_fmt = rt_banaye_submenu();
+    rt_jodo_menu_item(menu_fmt, 302, 31); +++ Font
+    rt_jodo_submenu(menu_bar, menu_fmt, 3);
+    
+    rt_set_menu(win, menu_bar);
+    
+    +++ Setup Editor
+    chanchal edit_area = rt_sijan_lekh_patra(win);
+    
+    +++ Event Loop
+    chanchal running = 1;
+    jabtak (running) {
+        chanchal ev = rt_intezaar();
+        
+        agar (ev < 0) tab {
+            running = 0;
+        } varnaa {
+            
+            +++ New File
+            agar (ev == 101) tab {
+                rt_set_title(win, 0);
+                rt_lekh_set(edit_area); +++ Empty buffer
+            };
+
+            +++ Handle Open (Load Logic)
+            agar (ev == 102) tab {
+                chanchal ok = rt_kholo_dialog();
+                agar (ok) tab {
+                   rt_load_file(); +++ Read file to buffer
+                   rt_lekh_set(edit_area); +++ Inject buffer to UI
+                   rt_set_title(win, 99); +++ Update window title
+                   dikhawa_sandesh(200); +++ Success notification
+                };
+            };
+            
+            +++ Handle Save (Write Logic)
+            agar (ev == 103) tab {
+                chanchal ok = rt_surakshit_dialog();
+                agar (ok) tab {
+                   rt_panni_par_likho(edit_area); +++ Write UI text to file
+                   rt_set_title(win, 99);
+                   dikhawa_sandesh(201); +++ Success notification
+                };
+            };
+            
+            +++ Handle Font Dialog
+            agar (ev == 302) tab {
+                rt_kholo_font_dialog();
+            };
+            
+            +++ Exit
+            agar (ev == 105) tab {
+                running = 0;
+            };
+        }
+    };
+    
+    0
+}

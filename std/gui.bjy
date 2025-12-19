@@ -1,0 +1,25 @@
+===
+Bhojya Standard GUI Package (Binary)
+Bind this file with your project to access the Native GUI.
+Usage: lathi std/gui.bjy my_project.bjy
+===
+
+bahari kaam rt_sijan_khidki(w, h);
+bahari kaam rt_sijan_lekh_patra(win);
+bahari kaam rt_banaye_menu();
+bahari kaam rt_banaye_submenu();
+bahari kaam rt_jodo_menu_item(menu, id, code);
+bahari kaam rt_jodo_submenu(parent, sub, code);
+bahari kaam rt_set_menu(win, menu);
+bahari kaam rt_intezaar();
+bahari kaam dikhawa_sandesh(code);
+bahari kaam rt_kholo_dialog();
+bahari kaam rt_surakshit_dialog();
+bahari kaam rt_kholo_font_dialog();
+bahari kaam rt_set_title(win, code);
+
++++ Content & File Access
+bahari kaam rt_lekh_set(handle);
+bahari kaam rt_lekh_lelo(handle);
+bahari kaam rt_load_file();
+bahari kaam rt_panni_par_likho(handle);
