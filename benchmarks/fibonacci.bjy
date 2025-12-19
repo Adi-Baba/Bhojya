@@ -1,0 +1,20 @@
+===
+Bhojya Performance Benchmark
+Computing Fibonacci Numbers (Recursive)
+===
+
+kaam fibonacci(n) {
+    agar (n < 2) tab {
+        n
+    } varnaa {
+        fibonacci(n - 1) + fibonacci(n - 2)
+    }
+}
+
+kaam mukhya() {
+    +++ Calculate fib(35) - computationally intensive
+    chanchal result = fibonacci(35);
+    
+    +++ Result should be 9227465
+    result
+}

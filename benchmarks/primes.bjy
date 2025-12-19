@@ -1,0 +1,40 @@
+===
+Bhojya Benchmark: Prime Counting
+Count primes up to N
+===
+
+kaam isPrime(n) {
+    agar (n < 2) tab { 0 } varnaa {
+        chanchal i = 2;
+        chanchal isPrimeFlag = 1;
+        
+        jabtak (i * i < n + 1) {
+            agar (n - (n / i) * i == 0) tab {
+                isPrimeFlag = 0;
+                i = n; +++ Break simulation
+            };
+            i = i + 1
+        };
+        
+        isPrimeFlag
+    }
+}
+
+kaam countPrimes(limit) {
+    chanchal count = 0;
+    chanchal n = 2;
+    
+    jabtak (n < limit) {
+        agar (isPrime(n)) tab {
+            count = count + 1
+        };
+        n = n + 1
+    };
+    
+    count
+}
+
+kaam mukhya() {
+    +++ Count primes up to 100,000
+    countPrimes(100000)
+}

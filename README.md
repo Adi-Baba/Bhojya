@@ -1,8 +1,16 @@
 # BHOJYA PROGRAMMING LANGUAGE - SDK v1.0
 
+![Language](https://img.shields.io/badge/Language-Hindi%20Based-orange?style=for-the-badge)
+![Platform](https://img.shields.io/badge/Platform-Windows-blue?style=for-the-badge)
+![Compilation](https://img.shields.io/badge/Compilation-Native%20LLVM-green?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-1.0-red?style=for-the-badge)
+
 **भोज्य** (Bhojya) - The Atman Native Language System
 
 A Hindi-based programming language that compiles to native Windows executables with built-in GUI support.
+
+> **⚡ Performance:** Bhojya is **21.7x faster** than Python for computational tasks! [See Benchmarks →](benchmarks/BENCHMARK_RESULTS.md)
 
 ---
 
@@ -142,6 +150,22 @@ kaam mukhya() {
 ⌨️ **Keyboard Shortcuts** - Ctrl+S, Ctrl+O, Ctrl+Backspace support
 🎨 **Font Customization** - System font picker integration
 📁 **File I/O** - Native Open/Save dialogs
+⚡ **High Performance** - 21.7x faster than Python for computational workloads
+
+---
+
+## ⚡ Performance
+
+Bhojya compiles to **optimized native machine code**, providing significant performance advantages over interpreted languages.
+
+**Benchmark: Recursive Fibonacci(35)**
+- Bhojya: 0.207s ⚡
+- Python: 4.486s 🐌
+- **Result: 21.7x faster!**
+
+📊 [View Full Benchmark Results →](benchmarks/BENCHMARK_RESULTS.md)
+
+Want to verify? Try: `lathi benchmarks\fibonacci.bjy && output.exe`
 
 ---
 
@@ -238,4 +262,4 @@ This is the v1.0 release. Future enhancements welcome!
 
 ---
 
-**Made with 🕉️ by the Bhojya Community**
+**Made with 🕉️ by Aditya**
