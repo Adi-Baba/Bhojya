@@ -1,0 +1,52 @@
+===
+Bhojya Calculator v2.0
+Continuous Chain Calculation
+Usage: lathi std/console.bjy Calculator_v2.bjy
+===
+
+kaam mukhya() {
+    
+    +++ Title Screen (String literal auto-prints in v1.0 compiler)
+    "-------------------------------";
+    "   BHOJYA CALCULATOR v2.0";
+    "-------------------------------";
+    
+    "Enter Start Number:";
+    chanchal result = rt_lelo();
+    
+    chanchal running = 1;
+    
+    jabtak (running) {
+        "-------------------------------";
+        "Current Result:";
+        rt_sacho(result);
+        "-------------------------------";
+        
+        "1: +  2: -  3: *  4: /  0: Exit/Clear";
+        "Select Op:";
+        chanchal op = rt_lelo();
+        
+        agar (op == 0) tab {
+            "1: Exit  2: Clear/Reset";
+            chanchal subObj = rt_lelo();
+            agar (subObj == 1) tab { running = 0; } varnaa { result = 0; };
+        } varnaa {
+            "Enter Next Number:";
+            chanchal nextVal = rt_lelo();
+            
+            agar (op == 1) tab { result = result + nextVal; };
+            agar (op == 2) tab { result = result - nextVal; };
+            agar (op == 3) tab { result = result * nextVal; };
+            agar (op == 4) tab { 
+                agar (nextVal == 0) tab {
+                    "Error: Div by Zero!";
+                } varnaa {
+                    result = result / nextVal;
+                }
+            };
+        }
+    };
+    
+    "Goodbye!";
+    0
+}
